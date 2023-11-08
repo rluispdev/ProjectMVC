@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct AddButton: View {
+    let title: String
+    let action: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       HStack {
+            Spacer()
+            Button(action: action ) {
+                    Image(systemName: "plus.circle.fill")
+                    Text(title)
+                    .font(.headline)
+            }
+            .padding(.trailing, 20.0)
+        }
+    
     }
 }
-
 #Preview {
-    AddButton()
+    VStack {
+        Spacer()
+        AddButton(title: "Add item", action: {})
+    }
 }

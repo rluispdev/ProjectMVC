@@ -10,6 +10,6 @@ import Foundation
 struct Transaction: Identifiable, Codable {
     let id = UUID()
     let amount: Int
-    let beneficuary: String
+    let beneficiary: String
     let date: Date
 }

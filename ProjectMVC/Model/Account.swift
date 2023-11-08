@@ -27,7 +27,7 @@ struct Account: Codable, Identifiable {
         self.name = name
         self.kind = kind
         self.iban = iban
-    transactions = [Transaction(amount: 2000_00, beneficuary: "Inicial Balance", date: Date())]
+    transactions = [Transaction(amount: 2000_00, beneficiary: "Inicial Balance", date: Date())]
     }
     
     mutating func add(_ transaction: Transaction) {

@@ -25,7 +25,7 @@ class StateController: ObservableObject {
     
     func addTransaction(withAmount amount: Int, beneficiary: String, to account: Account) {
         guard let index = accounts.firstIndex(where: {$0.id == account.id }) else {return }
-        let transactions = Transaction(amount: amount, beneficuary: beneficiary, date: Date())
+        let transactions = Transaction(amount: amount, beneficiary: beneficiary, date: Date())
         storageController.save(accounts)
     }
 }
